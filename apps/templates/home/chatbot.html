@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Icons {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+
+    <div class="container-fluid pt-5 pt-md-8 mt--7">
+
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0 d-flex justify-content-center text-uppercase" id="output"></h3>
+            </div>
+            <div class="card-body">
+              <div class="chat-container">
+        <!-- Chat messages will be added here by JavaScript -->
+              </div>
+              <form action="/chat" method="post" id="chat-form" class="chat-input">
+                  <input type="text" id="chat-input" name="user_input" placeholder="Type your message..." autocomplete="off" required>
+                  <button type="submit">Send</button>
+                  <button type="button" id="clear-chat">Clear Chat</button>
+              </form>
+              <div class="loader" id="loader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+<script src="/static/assets/vendor/clipboard/dist/clipboard.min.js"></script>
+<script src="/static/assets/js/main.js"></script>
+<script>
+    window.onload = function() {
+        // Extract parameters from the URL
+        var params = new URLSearchParams(window.location.search);
+
+        // Get the values of the parameters
+        var grade = params.get("grade");
+        var subject = params.get("subject");
+
+        // Display the values on the page
+        var output = document.getElementById("output");
+        output.innerHTML = "Grade: " + grade + " " + subject + " Bot";
+    };
+</script>
+
+{% endblock javascripts %}

@@ -1,0 +1,183 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Dashboard {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- Header -->
+    <div class="header pt-3 pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Grades Subscribed</h5>
+                      <span class="h2 font-weight-bold mb-0">2</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Subjects Subscribed</h5>
+                      <span class="h2 font-weight-bold mb-0">6</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                        <i class="ni ni-chart-pie-35"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Questions</h5>
+                      <span class="h2 font-weight-bold mb-0">116</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                        <i class="ni ni-money-coins"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Cost</h5>
+                      <span class="h2 font-weight-bold mb-0">LKR 492.00</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                        <i class="ni ni-chart-bar-32"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Grade 10</h3>
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-3 col-md-6">
+                 <a href="chatbot.html?grade=10&subject=Science" class="btn-icon-clipboard btn" title="Go To Subjects">
+                    <div>
+                        <i class="fas fa-microscope"></i>
+                        <span>Science</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <a href="chatbot.html?grade=10&subject=History" class="btn-icon-clipboard btn" title="Go To Subjects">
+                    <div>
+                        <i class="fas fa-landmark"></i>
+                        <span>History</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+              <h3 class="mb-0">Grade 11</h3>
+            </div>
+            <div class="card-body">
+              <div class="row icon-examples">
+                <div class="col-lg-3 col-md-6">
+                   <a href="chatbot.html?grade=11&subject=Science" class="btn-icon-clipboard btn" title="Go To Subjects">
+                    <div>
+                        <i class="fas fa-microscope"></i>
+                        <span>Science</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                   <a href="chatbot.html?grade=11&subject=History" class="btn-icon-clipboard btn" title="Go To Subjects">
+                    <div>
+                        <i class="fas fa-landmark"></i>
+                        <span>History</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <a href="chatbot.html?grade=11&subject=English" class="btn-icon-clipboard btn" title="Go To Subjects">
+                    <div>
+                        <i class="fas fa-book"></i>
+                        <span>English</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                   <a href="chatbot.html?grade=11&subject=Health" class="btn-icon-clipboard btn" title="Go To Subjects">
+                    <div>
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% include "includes/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+
+  <script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+{% endblock javascripts %}
